@@ -1,0 +1,242 @@
+
+
+:root {
+  --gray-color: #54595d;
+  --border-color:#a2a9b1;
+  --limits-color: #c8ccd1;
+  --blue-color: #3366cc;
+  /******************** Tipografia */
+  --article-counter--font-size: 12px;
+
+}
+body, h3, a, figure, p{
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  flex-direction: inherit;
+}
+
+.main-section {
+  padding-top: 50px;
+}
+
+/************************************* Wiki Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  margin-left: -25px;
+}
+.logo__img-container {
+  width: 176px;
+  margin: 0;
+}
+.logo__img{
+  width: 100%;
+}
+
+
+/************************************* Main Globe */
+.featured {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 100px repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  width: 546px;
+  margin: 0 auto;
+  column-gap: 50px;
+  justify-items: center;
+  grid-template-areas:  " . langEs langEs . . langEn langEn . . "
+                        " langCn1 langCn1 . world world world langDe langDe . "
+                        " langPy langPy . world world world  langFr langFr langFr"
+                        " langIt langIt .  world world world  langCn2 langCn2 . "
+                        " .  langPt langPt . . langPo langPo . . ";
+}
+.featured__item {
+  width: 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.featured__title {
+  color: var(--blue-color);
+  font-size: 16px;
+}
+.featured__title:hover {
+  text-decoration: underline;
+}
+
+.featured__article-counter {
+  color: var(--gray-color);
+  font-size: var(--article-counter--font-size);
+}
+.featured__img-container {
+  grid-area: world;
+  width:200px;
+  margin: 0;
+  margin-left: -25px;
+
+}
+.featured__world-logo {
+  width: 100%;
+}
+
+
+.langEs {
+  grid-area: langEs;
+}
+.langCn1 {
+  grid-area: langCn1;
+}
+.langPy {
+  grid-area: langPy;
+  /* justify-self: start; */
+}
+.langIt {
+  grid-area: langIt;
+}
+.langPt {
+  grid-area: langPt;
+}
+.langEn {
+  grid-area: langEn;
+}
+.langDe {
+  grid-area: langDe;
+}
+.langFr {
+  grid-area: langFr;
+}
+.langCn2 {
+  grid-area: langCn2;
+}
+.langPo {
+  grid-area: langPo;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  margin-top: 30px;
+}
+.search-form__input-container {
+  border: 1px solid var(--border-color);
+  width: 400px;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-right: 20px;
+  border-radius : 3px;
+  border-right:none ;
+}
+.search-from__text, .search-form__drop-down {
+  border: 0;
+  background-color: white;
+}
+.search-form__drop-down {
+  color: var(--gray-color);
+}
+
+.search-form__icon-container {
+  width: 56px;
+  height: 45px;
+  background-color: var(--blue-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+}
+.search-form--icon {
+  background-image: linear-gradient(transparent,transparent), url("https://www.wikipedia.org/portal/wikipedia.org/assets/img/sprite-81a290a5.png");
+}
+
+.search-form__button {
+  margin: 0;
+  background-position: 0 -669px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--blue-color);
+
+}
+
+.content-container {
+  border-top: 1px solid var(--border-color);
+  margin-top: 50px;
+  padding: 50px 30px;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 265px);
+  grid-template-rows: repeat(3, 50px);
+  row-gap: 50px;
+  column-gap: 20px;
+  align-items: flex-start;
+  /* grid-template-areas: "main sec sec sec"
+                        "main sec sec sec"
+                        "main2 sec sec sec"
+                        "main2 sec sec sec"; */
+
+}
+.content-container__description {
+  position: relative;
+  display: flex;
+  /* padding-top: 20px; */
+
+}
+.content-container__description p {
+  /* padding-left: 10px; */
+}
+.content__text strong {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.test {
+  grid-row: 1 / -1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+
+
+.main{
+  /* grid-area: main; */
+  grid-row: 0 / span 3;
+  align-self: flex-end;
+  /* margin-bottom: 50px; */
+}
+.main2 {
+  /* grid-area: main2; */
+  grid-row: 2 / span 3;
+  align-self: flex-start;
+
+}
+.main, .main2, .sec {
+  color: var(--gray-color);
+  font-size: var(--article-counter--font-size);
+}
+.sec strong{
+  color: var(--blue-color);
+}
+
+.footer-icon {
+  width: 42px;
+  margin-right: 10px;
+}
